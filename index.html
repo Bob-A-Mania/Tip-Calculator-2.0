@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- My Css -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+
+
+    <title>Tip Calculator</title>
+  </head>
+
+
+  <body>
+
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <form class="bg-light">
+            <h1>Tip Calculator</h1>
+            <p>Enter Your Bill Amount: ($) <input type="text" id="billAmount"></p>
+            <p>How Was Your Service?</p>
+              <select class="select" id="service">
+                <option value = ".30">Great = 30%</option>
+                <option value = ".20">Good = 20%</option>
+                <option value = ".15">Okay = 15%</option>
+                <option value = ".10">Bad = 10%</option>
+              </select>
+            <button type="button" name="button" onclick="calc()">Calculate</button>
+            <h3 id="output"></h3>
+            <h4 id="totalBill"></h4>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+  <script type="text/javascript">
+    function calc() {
+      var one = parseFloat(document.getElementById("billAmount").value);
+      var service = parseFloat(document.getElementById("service").value);
+      var total = one * service;
+      if (service == .30) {
+        document.getElementById("output").innerHTML = "You should tip: $" + total.toFixed(2);
+      }
+
+      else if (service == .20) {
+        document.getElementById("output").innerHTML = "You should tip: $" + total.toFixed(2);
+      }
+
+      else if (service == .15) {
+        document.getElementById("output").innerHTML = "You should tip: $" + total.toFixed(2);
+      }
+
+      else {
+        document.getElementById("output").innerHTML = "You should tip: $" + total.toFixed(2);
+      }
+
+    var grandTotal = total + one;
+    var finalBill = document.getElementById("totalBill").innerHTML = "Your Total Bill is: $" + grandTotal.toFixed(2);
+  }
+  </script>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
